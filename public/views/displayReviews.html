@@ -1,0 +1,26 @@
+<section ng-controller="ReviewsController" ng-init="find()">
+              <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <div class="md-toolbar-tools" layout="row">
+                  <label flex>Display of All Reviews</label>
+                  <md-input-container flex>
+                      <label>Find By Name</label>
+                      <input ng-model="review.author">
+                    </md-input-container>
+                </div>
+                </md-toolbar>
+                <md-card-content layout="column">
+                    
+                  <md-list layout="column">
+                    <md-list-item class="md-3-line" ng-repeat="review in reviews|filter: review.author">
+                        <img ng-src="{{ review.ImgURL }}" class="md-avatar"/>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ review.author }}</h3>
+                            <a ng-href="#!/reviews/{{review._id}}">{{ review.reviewTitle }}</a>
+                            <p>{{ review.dateCreated }}</p>
+                        </div>
+                    </md-list-item>
+                  </md-list>
+                </md-card-content>
+              </md-card>
+          </section>

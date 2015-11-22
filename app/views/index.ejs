@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Review_App">
+  <head>
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body layout="column">
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <h1 flex>Game Review</h1>
+            <div layout="row">
+              <md-button href="/#!/" flex="20" class="md-accent md-raised">Home</md-button>
+                <md-button href="/#!/reviews/create" flex="35" class="md-accent md-raised">Create Review</md-button>
+                <md-button href="/#!/reviews" flex="30" class="md-accent md-raised">View Reviews</md-button>
+
+            </div>
+      </div>
+    </md-toolbar>
+    <div layout="row" flex>
+            <md-content layout="column" flex class="md-padding md-whiteframe-2dp">
+
+
+              <section ng-view></section>
+              
+              
+            </md-content>
+        </div>
+
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    
+    <script src="/public/module.js"></script>
+    
+    <script src="/public/controllers/review.public.controller.js"></script>
+    
+    <script src="/public/services/review.public.service.js"></script>
+    
+    <script src="/public/routes/review.public.route.js"></script>
+    
+    <script src="/public/application.js"></script>
+  </body>
+</html>

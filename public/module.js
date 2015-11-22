@@ -1,0 +1,1 @@
+angular.module('reviews', ['ngResource', 'ngRoute']);

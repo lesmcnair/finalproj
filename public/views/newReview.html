@@ -1,0 +1,52 @@
+ <section ng-app="Review_App" ng-controller="ReviewsController">
+              <form ng-submit="create()" novalidate>
+                <input ng-model="author" type="hidden"/>
+                <input ng-model="reviewBody" type="hidden"/>
+                <input ng-model="reviewTitle" type="hidden"/>
+                <input ng-model="starRating" type="hidden"/>
+                <input ng-model="ImgURL" type="hidden"/>
+                <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                  <h2 class="md-toolbar-tools">
+                    <span>Create a Review</span>
+                  </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Author</label>
+                    <input ng-model="author" id="author" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Enter Review Content</label>
+                    <input ng-model="reviewBody" id="reviewBody" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Review Title</label>
+                    <input ng-model="reviewTitle" id="reviewTitle" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Star Rating</label>
+                    <input ng-model="starRating" id="starRating" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Image URL</label>
+                    <input ng-model="ImgURL" id="ImgURL" required>
+                  </md-input-container>
+                    
+                  </md-content>
+                 <md-button class="md-raised md-primary" type="submit">
+                    Submit
+                  </md-button>
+                  <div ng-bind="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </md-card>
+              </form>
+          </section>

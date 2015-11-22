@@ -1,0 +1,47 @@
+ <section ng-controller="ReviewsController" data-ng-init="findOne()">
+              <md-card>
+                  <form ng-submit="update()" novalidate>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  Edit Review
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  
+                  <md-input-container>
+                    <label>Edit Review Title</label>
+                    <input ng-model="review.reviewTitle">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Edit Review Author</label>
+                    <input ng-model="review.author">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Edit Star Rating</label>
+                    <input ng-model="review.starRating" type="Class">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Edit Image URL</label>
+                    <input ng-model="review.ImgURL" type="order">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Edit Review Details</label>
+                    <input ng-model="review.reviewBody" type="family">
+                  </md-input-container>
+                  
+                  <br>
+                </md-content>
+                <div layout="row">
+                    <md-button class="md-raised md-primary" flex type="submit" value="Update">
+                        Submit
+                    </md-button>
+                </div>
+                </md-card-content>
+                </form>
+              </md-card>
+          </section>
